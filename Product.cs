@@ -11,6 +11,7 @@ namespace valvoline
 		public string Name { get; internal set; }
 		public string Category1 { get; internal set; }
 		public string Category2 { get; internal set; }
+		public string Category3 { get; internal set; }
 		public string Link { get; internal set; }
 	}
 }
