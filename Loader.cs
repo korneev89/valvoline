@@ -18,7 +18,9 @@ namespace valvoline
 		[SetUp]
 		public void Start()
 		{
-			driver = new ChromeDriver();
+			var options = new ChromeOptions();
+			options.AddArgument("headless");
+			driver = new ChromeDriver(options);
 			wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 		}
 
