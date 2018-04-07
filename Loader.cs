@@ -13,19 +13,22 @@ using System.Collections.Generic;
 namespace valvoline
 {
 	[TestFixture]
-	public class Loader1 : TestBase
+	public class Tests : TestBase
 	{
 		[SetUp]
 		public void Start()
 		{
 			var options = new ChromeOptions();
+
+			// comment next line for silent mode
 			options.AddArgument("headless");
+
 			driver = new ChromeDriver(options);
 			wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 		}
 
 		[Test]
-		public void LoadInfo()
+		public void DownloadAllProductsInfo()
 		{
 
 			driver.Url = "https://www.valvolineeurope.com/russian/products";
